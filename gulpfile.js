@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+    util = require('gulp-util'),
     watch = require('gulp-watch'),
     http = require('http'),
     stylus = require('gulp-stylus'),
@@ -6,7 +7,7 @@ var gulp = require('gulp'),
     rupture = require('rupture'),
     ecstatic = require('ecstatic');
 
-var stylusRoot = './src/stylus';
+var stylusRoot = __dirname + '/src/stylus';
 
 gulp.task('app.stylus', function () {
   gulp.src(stylusRoot + '/app.styl')
@@ -16,7 +17,7 @@ gulp.task('app.stylus', function () {
 
 
 gulp.task('watch', function() {
-  gulp.watch(stylusRoot + '/**/*.styl');
+  gulp.watch(stylusRoot + '/**/*.styl', ['app.stylus'])
 });
 
 
