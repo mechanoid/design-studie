@@ -6,15 +6,17 @@ var gulp = require('gulp'),
     rupture = require('rupture'),
     ecstatic = require('ecstatic');
 
+var stylusRoot = './src/stylus';
+
 gulp.task('app.stylus', function () {
-  gulp.src('./src/stylus/app.styl')
+  gulp.src(stylusRoot + '/app.styl')
     .pipe(stylus({use: [nib(), rupture()]}))
-    .pipe(gulp.dest('./build/css/app.css'));
+    .pipe(gulp.dest('./build/css'));
 });
 
 
 gulp.task('watch', function() {
-  gulp.watch('/stylus/**/*.js', ['jsDependencies']);
+  gulp.watch(stylusRoot + '/**/*.styl');
 });
 
 
@@ -27,4 +29,4 @@ gulp.task('createServer', function() {
 
 gulp.task('default', ['app.stylus'], function(){});
 
-gulp.task('server', ['watch', 'createServer']);
+gulp.task('server', ['app.stylus', 'watch', 'createServer']);
