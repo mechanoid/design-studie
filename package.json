@@ -1,0 +1,19 @@
+{
+  "name": "design-studie",
+  "version": "0.0.1",
+  "description": "showing some ux behaviour",
+  "main": "javascripts/dist/app.js",
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "dependencies": {
+    "ecstatic": "^0.5.5",
+    "gulp": "^3.8.8",
+    "gulp-stylus": "^1.3.3",
+    "gulp-watch": "^1.1.0",
+    "nib": "^1.0.4",
+    "rupture": "^0.4.0"
+  },
+  "devDependencies": {}
+}
