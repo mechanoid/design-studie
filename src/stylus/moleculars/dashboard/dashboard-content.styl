@@ -1,0 +1,25 @@
+.dashboard-content
+  margin 2em 0
+  overflow hidden
+  center(1900, 2em)
+
+
+.dashboard-content-primary
+  col(2/4)
+
+
+.dashboard-content-secondary
+  col(2/4)
+
++below(vertical-tablet-width)
+  .dashboard-content-primary
+    col(4/4)
+
+  .dashboard-content-secondary
+    margin-top 10px
+    col(4/4)
+
+
++below(mobile-landscape)
+  .dashboard-content-secondary
+    display none

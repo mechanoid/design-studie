@@ -1,7 +1,26 @@
 @import 'nib'
+@import 'jeet'
 @import 'rupture'
+
+// grid debug code
+// edit()
+
+// TODO: maybe to use for prod apps, research!
+// rupture.use-device-width = true
+
 global-reset()
+
+@require 'globals'
+@require 'atoms'
+@require 'moleculars'
 
 *
   box-sizing border-box
-  color red
+
+html, body
+  width 100%
+  height 100%
+
+li,span,div
+  text-indent -9999px
+  font-size 0
