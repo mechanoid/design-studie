@@ -11,7 +11,6 @@
     "bower_components"
   ],
   "dependencies": {
-    "swipejs": "~2.0.0",
     "touchy": "*",
     "swiper": "~2.7.0"
   }
