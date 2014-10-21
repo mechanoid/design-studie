@@ -254,8 +254,10 @@ a img {
   background-color: #f00;
 }
 @media only screen and (max-device-width: 479px) {
-  .direct-access-navigation li.swiper-slide {
-    width: auto;
+  .direct-access-navigation ul.swiper-wrapper {
+    width: 100%;
+  }
+  .direct-access-navigation li {
     *zoom: 1;
     float: left;
     clear: none;
@@ -265,19 +267,19 @@ a img {
     margin-right: 3%;
     margin-top: 10px;
   }
-  .direct-access-navigation li.swiper-slide:before,
-  .direct-access-navigation li.swiper-slide:after {
+  .direct-access-navigation li:before,
+  .direct-access-navigation li:after {
     content: '';
     display: table;
   }
-  .direct-access-navigation li.swiper-slide:after {
+  .direct-access-navigation li:after {
     clear: both;
   }
-  .direct-access-navigation li.swiper-slide:nth-child(3n) {
+  .direct-access-navigation li:nth-child(3n) {
     margin-right: 0%;
     float: right;
   }
-  .direct-access-navigation li.swiper-slide:nth-child(3n+1) {
+  .direct-access-navigation li:nth-child(3n+1) {
     clear: both;
   }
 }
