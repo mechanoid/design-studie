@@ -271,14 +271,14 @@ function Swipe(container, options) {
         stop();
 
         // increase resistance if first or last slide
-        delta.x =
-          delta.x /
-            ( (!index && delta.x > 0               // if first slide and sliding left
-              || index == slides.length - 1        // or if last slide and sliding right
-              && delta.x < 0                       // and if sliding at all
-            ) ?
-            ( Math.abs(delta.x) / width + 1 )      // determine resistance level
-            : 1 );                                 // no resistance if false
+        // delta.x =
+        //   delta.x /
+        //     ( (!index && delta.x > 0               // if first slide and sliding left
+        //       || index == slides.length - 1        // or if last slide and sliding right
+        //       && delta.x < 0                       // and if sliding at all
+        //     ) ?
+        //     ( Math.abs(delta.x) / width + 1 )      // determine resistance level
+        //     : 1 );                                 // no resistance if false
 
         // translate 1:1
         translate(index-1, delta.x + slidePos[index-1], 0);
