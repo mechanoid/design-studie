@@ -63,9 +63,27 @@
   </section>
 
   <!-- // <script charset="utf-8" src="bower_components/swipejs/swipe.js"></script> -->
-  <script defer src="bower_components/swiper/dist/idangerous.swiper.js"></script>
+  <script src="bower_components/swiper/dist/idangerous.swiper.js"></script>
+  <script src="vendor/jrespond.js"></script>
+
   <script charset="utf-8">
-    // window.favouriteSwipe = new Swipe(document.getElementById('fav-slider'));
+    var jRes = jRespond([
+      {
+        label: 'mobile-landscape',
+        enter: 0,
+        exit: 479
+      },
+      {
+        label: 'small-tablet-vertical',
+        enter: 480,
+        exit: 599
+      },
+      {
+        label: 'portrait-tablet-width',
+        enter: 600,
+        exit: 1199
+      }
+    ]);
 
     window.onload = function() {
       var favSwiper = new Swiper('.favourite-access-navigation.swiper-container',{
@@ -76,11 +94,22 @@
         //etc..
       });
 
+      var accessNavSwiper;
+      jRes.addFunc(
+        {
+          breakpoint: ['small-tablet-vertical', 'portrait-tablet-width'],
+          enter: function() {
+            accessNavSwiper = new Swiper('.direct-access-navigation.swiper-container',{
+              slidesPerView: 'auto',
+              calculateHeight: true
+            });
+          },
+          exit: function() {
+            if(accessNavSwiper) accessNavSwiper.destroy();
+          }
+        }
+      );
 
-      var accessNavSwiper = new Swiper('.direct-access-navigation.swiper-container',{
-        slidesPerView: 'auto',
-        calculateHeight: true
-      })
     }
 
   </script>
