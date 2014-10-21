@@ -254,8 +254,11 @@ a img {
   background-color: #f00;
 }
 @media only screen and (max-device-width: 479px) {
+  .direct-access-navigation {
+    width: 100% !important;
+  }
   .direct-access-navigation ul.swiper-wrapper {
-    width: 100%;
+    width: 100% !important;
   }
   .direct-access-navigation li {
     *zoom: 1;
