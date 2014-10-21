@@ -99,7 +99,7 @@ a img {
   height: 2em;
   background-color: #000;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-device-width: 768px) {
   .dashboard-header {
     display: none;
   }
@@ -165,7 +165,7 @@ a img {
 .dashboard-content-secondary:last-child {
   margin-right: 0%;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-device-width: 767px) {
   .dashboard-content-primary {
     *zoom: 1;
     float: left;
@@ -208,7 +208,7 @@ a img {
     margin-right: 0%;
   }
 }
-@media only screen and (max-width: 479px) {
+@media only screen and (max-device-width: 479px) {
   .dashboard-content-secondary {
     display: none;
   }
@@ -220,7 +220,7 @@ a img {
   width: 100%;
   background-color: #acdbf5;
 }
-@media only screen and (max-width: 479px) {
+@media only screen and (max-device-width: 479px) {
   .dashboard-footer {
     *zoom: 1;
     width: auto;
@@ -253,7 +253,7 @@ a img {
 .direct-access-navigation li:nth-of-type(odd) {
   background-color: #f00;
 }
-@media only screen and (max-width: 479px) {
+@media only screen and (max-device-width: 479px) {
   .direct-access-navigation li {
     *zoom: 1;
     float: left;
@@ -280,7 +280,7 @@ a img {
     clear: both;
   }
 }
-@media only screen and (min-width: 479px) {
+@media only screen and (min-device-width: 479px) {
   .direct-access-navigation {
     overflow: hidden;
     padding: 10px;
@@ -322,7 +322,7 @@ a img {
 .clock-presenter {
   margin-bottom: 40px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-device-width: 767px) {
   .clock-presenter,
   .weather-presenter {
     *zoom: 1;
