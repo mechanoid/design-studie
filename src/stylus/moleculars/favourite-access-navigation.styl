@@ -1,19 +1,26 @@
 .favourite-access-navigation
   overflow hidden
 
-  li
-    display none
-    // span(3/12)
-
-    &:first-of-type
-      display block
+  // li
+  //   display none
+  //   // span(3/12)
+  //
+  //   &:first-of-type
+  //     display block
 
 
   .favourite
-    background-color #de450a
+
     display block
     width 100%
     height 300px
+
+    &.fav-1
+      background-color #de450a
+    &.fav-2
+      background-color #09e042
+    &.fav-3
+      background-color #0937e0
 
 // +below(mobile-landscape)
 //   .favourite-access-navigation
@@ -25,3 +32,18 @@
 //       display block
 //       col(1/3, cycle: 3)
 //       margin-top 10px
+
+
+.swipe
+  overflow hidden
+  visibility hidden
+  position relative
+
+.swipe-wrap
+  overflow hidden
+  position relative
+
+.swipe-wrap > li
+  float left
+  width 100%
+  position relative

@@ -14,11 +14,11 @@
 
     <section  class="dashboard-content">
       <div class="dashboard-content-primary">
-        <nav class="favourite-access-navigation">
-          <ul>
-            <li><span class="favourite">elem 1</span></li>
-            <li><span class="favourite">elem 2</span></li>
-            <li><span class="favourite">elem 3</span></li>
+        <nav id="fav-slider" class="favourite-access-navigation swipe">
+          <ul class='swipe-wrap'>
+            <li><span class="favourite fav-1">elem 1</span></li>
+            <li><span class="favourite fav-2">elem 2</span></li>
+            <li><span class="favourite fav-3">elem 3</span></li>
           </ul>
         </nav>
       </div>
@@ -48,5 +48,19 @@
     </footer>
 
   </section>
+
+  <script charset="utf-8" src="bower_components/swipejs/swipe.js"></script>
+  <script charset="utf-8">
+    window.favouriteSwipe = new Swipe(document.getElementById('fav-slider'), {
+      startSlide: 0,
+      speed: 400,
+      // auto: 3000,
+      continuous: true,
+      disableScroll: false,
+      stopPropagation: false,
+      callback: function(index, elem) {},
+      transitionEnd: function(index, elem) {}
+    });
+  </script>
 </body>
 </html>
