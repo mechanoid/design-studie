@@ -70,14 +70,8 @@ function Swipe(container, options) {
 
   function prev() {
 
-    if (index) {
-      slide(index-1);
-      document.getElementById('fav-slider').style.border = "10px solid green"
-    }
-    else if (options.continuous) {
-      slide(slides.length-1);
-      document.getElementById('fav-slider').style.border = "10px solid blue"
-    }
+    if (index) slide(index-1);
+    else if (options.continuous) slide(slides.length-1);
 
   }
 
