@@ -312,22 +312,18 @@ function Swipe(container, options) {
 
         if (isValidSlide && !isPastBounds) {
 
-          // scrolling left
           if (direction) {
 
-            // move(index-1, -width, 0);
-            // move(index, slidePos[index]-width, speed);
-            // move(index+1, slidePos[index+1]-width, speed);
-            prev();
+            move(index-1, -width, 0);
+            move(index, slidePos[index]-width, speed);
+            move(index+1, slidePos[index+1]-width, speed);
             index += 1;
 
-          // scrolling right
           } else {
 
-            // move(index+1, width, 0);
-            // move(index, slidePos[index]+width, speed);
-            // move(index-1, slidePos[index-1]+width, speed);
-            next()
+            move(index+1, width, 0);
+            move(index, slidePos[index]+width, speed);
+            move(index-1, slidePos[index-1]+width, speed);
             index += -1;
 
           }
