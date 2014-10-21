@@ -102,7 +102,8 @@
 
       var accessNavSwiper = new Swiper('.direct-access-navigation.swiper-container',{
         slidesPerView: 'auto',
-        calculateHeight: true
+        calculateHeight: true,
+        resistance: '100%'
       });
 
       jRes.addFunc(
@@ -113,7 +114,6 @@
               slidesPerView: 'auto',
               calculateHeight: true
             });
-
             adjustNavItemHeight();
           },
           exit: function() {
@@ -126,8 +126,10 @@
         {
           breakpoint: ['mobile-landscape'],
           enter: function() {
-            adjustNavItemHeight();
+
             $('body').css('background-color', "red");
+            adjustNavItemHeight();
+
             if(accessNavSwiper) {
               accessNavSwiper.destroy();
               accessNavSwiper = null;
@@ -136,7 +138,7 @@
           exit: function() {
 
           }
-        }  
+        }
       );
 
     }
