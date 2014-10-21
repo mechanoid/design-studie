@@ -120,6 +120,7 @@
         breakpoint: 'mobile-landscape',
         enter: function() {
           adjustNavItemHeight();
+          if(accessNavSwiper) accessNavSwiper.destroy();
         },
         exit: function() {
 
