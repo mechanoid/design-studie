@@ -127,10 +127,10 @@
           breakpoint: 'mobile-landscape',
           enter: function() {
             adjustNavItemHeight();
+            $('body').css('background-color', "red");
             if(accessNavSwiper) {
               accessNavSwiper.destroy();
               accessNavSwiper = null;
-              $('body').css('background-color', "red");
             }
           },
           exit: function() {
