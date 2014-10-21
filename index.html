@@ -51,16 +51,7 @@
 
   <script charset="utf-8" src="bower_components/swipejs/swipe.js"></script>
   <script charset="utf-8">
-    window.favouriteSwipe = new Swipe(document.getElementById('fav-slider'), {
-      startSlide: 0,
-      speed: 400,
-      // auto: 3000,
-      continuous: true,
-      disableScroll: false,
-      stopPropagation: false,
-      callback: function(index, elem) {},
-      transitionEnd: function(index, elem) {}
-    });
+    window.favouriteSwipe = new Swipe(document.getElementById('fav-slider'));
   </script>
 </body>
 </html>

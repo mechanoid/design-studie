@@ -1,0 +1,16 @@
+{
+  "name": "Design Studie",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "package.json",
+    "gulpfile.js",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "swipejs": "~2.0.0"
+  }
+}
