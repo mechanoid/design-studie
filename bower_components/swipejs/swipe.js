@@ -70,7 +70,10 @@ function Swipe(container, options) {
 
   function prev() {
 
-    if (index) { slide(index-1) }
+    if (index) {
+      slide(index-1);
+      alert("FUCK YOU");
+    }
     else if (options.continuous) {
       slide(slides.length-1);
       alert("omg");
