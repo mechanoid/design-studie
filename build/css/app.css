@@ -316,7 +316,7 @@ a img {
   background-color: #e207bb;
 }
 @media only screen and (min-resolution: 1.5dppx), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
-  .favourite {
+  .favourite-access-navigation .favourite {
     height: 600px;
   }
 }
