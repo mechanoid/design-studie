@@ -72,11 +72,11 @@ function Swipe(container, options) {
 
     if (index) {
       slide(index-1);
-      alert("FUCK YOU");
+      document.getElementById('fav-slider').style.border = "10px solid green"
     }
     else if (options.continuous) {
       slide(slides.length-1);
-      alert("omg");
+      document.getElementById('fav-slider').style.border = "10px solid blue"
     }
 
   }
