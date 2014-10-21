@@ -253,7 +253,7 @@ a img {
 .direct-access-navigation li:nth-of-type(odd) {
   background-color: #f00;
 }
-@media only screen and (max-device-width: 400px) {
+@media only screen and (max-device-width: 479px) {
   .direct-access-navigation {
     width: 100% !important;
   }
