@@ -12,6 +12,7 @@
   ],
   "dependencies": {
     "touchy": "*",
-    "swiper": "~2.7.0"
+    "swiper": "~2.7.0",
+    "jquery": "~2.1.1"
   }
 }

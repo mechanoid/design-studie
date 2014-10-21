@@ -61,7 +61,7 @@
     </footer>
 
   </section>
-  <!-- // <script charset="utf-8" src="bower_components/swipejs/swipe.js"></script> -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/swiper/dist/idangerous.swiper.js"></script>
   <script src="vendor/jrespond.js"></script>
 
@@ -84,6 +84,13 @@
       }
     ]);
 
+    var adjustNavItemHeight = function(){
+      $('.direct-access-navigation li').each(function(_, elem){
+        $elem = $(elem);
+        $elem.height($elem.width);
+      });
+    };
+
     window.onload = function() {
       var favSwiper = new Swiper('.favourite-access-navigation.swiper-container',{
         //Your options here:
@@ -94,20 +101,30 @@
       });
 
       var accessNavSwiper;
-      jRes.addFunc(
-        {
+      jRes.addFunc({
           breakpoint: ['small-tablet-vertical', 'portrait-tablet-width'],
           enter: function() {
             accessNavSwiper = new Swiper('.direct-access-navigation.swiper-container',{
               slidesPerView: 'auto',
               calculateHeight: true
             });
+
+            adjustNavItemHeight();
           },
           exit: function() {
             if(accessNavSwiper) accessNavSwiper.destroy();
           }
+      });
+
+      jRes.addFunc({
+        breakpoint: 'mobile-landscape',
+        enter: function() {
+          adjustNavItemHeight();
+        },
+        exit: function() {
+
         }
-      );
+      });
 
     }
 
