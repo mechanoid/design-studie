@@ -87,7 +87,7 @@
     var adjustNavItemHeight = function(){
       $('.direct-access-navigation li').each(function(_, elem){
         $elem = $(elem);
-        $elem.height($elem.width);
+        $elem.css('height', $elem.css('width'));
       });
     };
 
