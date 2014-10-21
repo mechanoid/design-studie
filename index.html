@@ -36,26 +36,26 @@
     </section>
 
     <footer class="dashboard-footer">
-      <nav class="direct-access-navigation">
-        <ul>
-          <li>Wohnzimmer</li>
-          <li>Schlafzimmer</li>
-          <li>Küche</li>
-          <li>Kameras</li>
-          <li>Klimatronik</li>
-          <li>Wetter</li>
-          <li>Wohnzimmer</li>
-          <li>Schlafzimmer</li>
-          <li>Küche</li>
-          <li>Kameras</li>
-          <li>Klimatronik</li>
-          <li>Wetter</li>
-          <li>Wohnzimmer</li>
-          <li>Schlafzimmer</li>
-          <li>Küche</li>
-          <li>Kameras</li>
-          <li>Klimatronik</li>
-          <li>Wetter</li>
+      <nav class="direct-access-navigation swiper-container">
+        <ul class='swiper-wrapper'>
+          <li class="swiper-slide">Wohnzimmer</li>
+          <li class="swiper-slide">Schlafzimmer</li>
+          <li class="swiper-slide">Küche</li>
+          <li class="swiper-slide">Kameras</li>
+          <li class="swiper-slide">Klimatronik</li>
+          <li class="swiper-slide">Wetter</li>
+          <li class="swiper-slide">Wohnzimmer</li>
+          <li class="swiper-slide">Schlafzimmer</li>
+          <li class="swiper-slide">Küche</li>
+          <li class="swiper-slide">Kameras</li>
+          <li class="swiper-slide">Klimatronik</li>
+          <li class="swiper-slide">Wetter</li>
+          <li class="swiper-slide">Wohnzimmer</li>
+          <li class="swiper-slide">Schlafzimmer</li>
+          <li class="swiper-slide">Küche</li>
+          <li class="swiper-slide">Kameras</li>
+          <li class="swiper-slide">Klimatronik</li>
+          <li class="swiper-slide">Wetter</li>
         </ul>
       </nav>
     </footer>
@@ -68,14 +68,21 @@
     // window.favouriteSwipe = new Swipe(document.getElementById('fav-slider'));
 
     window.onload = function() {
-      var mySwiper = new Swiper('.swiper-container',{
+      var favSwiper = new Swiper('.favourite-access-navigation.swiper-container',{
         //Your options here:
         calculateHeight: true,
         mode:'horizontal',
         loop: true
         //etc..
       });
+
+
+      var accessNavSwiper = new Swiper('.direct-access-navigation.swiper-container',{
+        slidesPerView: 'auto',
+        calculateHeight: true
+      })
     }
+
   </script>
 </body>
 </html>
