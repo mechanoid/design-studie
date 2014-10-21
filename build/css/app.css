@@ -283,7 +283,10 @@ a img {
     padding: 10px;
   }
   .direct-access-navigation ul {
-    width: 3000px;
+    width: 3000px !important;
+  }
+  .direct-access-navigation.swiper-container {
+    width: 100%;
   }
 }
 .favourite-access-navigation {
