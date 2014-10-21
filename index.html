@@ -100,26 +100,37 @@
         //etc..
       });
 
-      var accessNavSwiper; // = new Swiper('.direct-access-navigation.swiper-container',{
-      //   slidesPerView: 'auto',
-      //   calculateHeight: true
-      // });
+      var accessNavSwiper = new Swiper('.direct-access-navigation.swiper-container',{
+        slidesPerView: 'auto',
+        calculateHeight: true
+      });
 
       jRes.addFunc(
         {
           breakpoint: ['small-tablet-vertical', 'portrait-tablet-width'],
           enter: function() {
+            accessNavSwiper = new Swiper('.direct-access-navigation.swiper-container',{
+              slidesPerView: 'auto',
+              calculateHeight: true
+            });
+
             adjustNavItemHeight();
           },
           exit: function() {
-            if(accessNavSwiper) accessNavSwiper.destroy();
+            if(accessNavSwiper) {
+              accessNavSwiper.destroy();
+              accessNavSwiper = null;
+            }
           }
         },
         {
           breakpoint: 'mobile-landscape',
           enter: function() {
             adjustNavItemHeight();
-            if(accessNavSwiper) accessNavSwiper.destroy();
+            if(accessNavSwiper) {
+              accessNavSwiper.destroy();
+              accessNavSwiper = null;
+            }
           },
           exit: function() {
 
