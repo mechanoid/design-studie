@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>DesignStudie</title>
-
+   <link rel="stylesheet" href="./bower_components/swiper/dist/idangerous.swiper.css">
   <link rel="stylesheet" href="./build/css/app.css" media="screen" title="app stylesheet" charset="utf-8">
+
 </head>
 <body>
   <section class="frame">
@@ -14,11 +15,11 @@
 
     <section  class="dashboard-content">
       <div class="dashboard-content-primary">
-        <nav id="fav-slider" class="favourite-access-navigation swipe">
-          <ul class='swipe-wrap'>
-            <li><span class="favourite fav-1">elem 1</span></li>
-            <li><span class="favourite fav-2">elem 2</span></li>
-            <li><span class="favourite fav-3">elem 3</span></li>
+        <nav class="favourite-access-navigation swiper-container">
+          <ul class='swiper-wrapper'>
+            <li class="swiper-slide"><span class="favourite fav-1">elem 1</span></li>
+            <li class="swiper-slide"><span class="favourite fav-2">elem 2</span></li>
+            <li class="swiper-slide"><span class="favourite fav-3">elem 3</span></li>
           </ul>
         </nav>
       </div>
@@ -43,16 +44,36 @@
           <li>Kameras</li>
           <li>Klimatronik</li>
           <li>Wetter</li>
+          <li>Wohnzimmer</li>
+          <li>Schlafzimmer</li>
+          <li>Küche</li>
+          <li>Kameras</li>
+          <li>Klimatronik</li>
+          <li>Wetter</li>
+          <li>Wohnzimmer</li>
+          <li>Schlafzimmer</li>
+          <li>Küche</li>
+          <li>Kameras</li>
+          <li>Klimatronik</li>
+          <li>Wetter</li>
         </ul>
       </nav>
     </footer>
 
   </section>
-
-  <script charset="utf-8" src="bower_components/swipejs/swipe.js"></script>
-
+  <!-- // <script charset="utf-8" src="bower_components/swipejs/swipe.js"></script> -->
+  <script defer src="bower_components/swiper/dist/idangerous.swiper.js"></script>
   <script charset="utf-8">
-    window.favouriteSwipe = new Swipe(document.getElementById('fav-slider'), {continuous: true});
+    // window.favouriteSwipe = new Swipe(document.getElementById('fav-slider'));
+
+    window.onload = function() {
+      var mySwiper = new Swiper('.swiper-container',{
+        //Your options here:
+        mode:'horizontal',
+        loop: true
+        //etc..
+      });
+    }
   </script>
 </body>
 </html>

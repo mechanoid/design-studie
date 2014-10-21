@@ -1,8 +1,4 @@
 .direct-access-navigation
-  overflow hidden
-
-  ul
-    width 3000px
   li
     width 100px
     height 100px
@@ -13,11 +9,13 @@
 
 +below(mobile-landscape)
   .direct-access-navigation
-    overflow visible
-
-    ul
-      width auto
-
     li
       col(1/3, cycle: 3)
       margin-top 10px
+
++from(mobile-landscape)
+  .direct-access-navigation
+    overflow hidden
+    padding 10px
+    ul
+      width 3000px

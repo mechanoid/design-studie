@@ -243,12 +243,6 @@ a img {
     clear: both;
   }
 }
-.direct-access-navigation {
-  overflow: hidden;
-}
-.direct-access-navigation ul {
-  width: 3000px;
-}
 .direct-access-navigation li {
   width: 100px;
   height: 100px;
@@ -257,12 +251,6 @@ a img {
   background-color: #00b7ff;
 }
 @media only screen and (max-device-width: 479px) {
-  .direct-access-navigation {
-    overflow: visible;
-  }
-  .direct-access-navigation ul {
-    width: auto;
-  }
   .direct-access-navigation li {
     *zoom: 1;
     float: left;
@@ -289,6 +277,15 @@ a img {
     clear: both;
   }
 }
+@media only screen and (min-device-width: 479px) {
+  .direct-access-navigation {
+    overflow: hidden;
+    padding: 10px;
+  }
+  .direct-access-navigation ul {
+    width: 3000px;
+  }
+}
 .favourite-access-navigation {
   overflow: hidden;
 }
@@ -298,27 +295,17 @@ a img {
   height: 300px;
 }
 .favourite-access-navigation .favourite.fav-1 {
-  background-color: #e0886d;
+  background-color: #e93e0a;
 }
 .favourite-access-navigation .favourite.fav-2 {
-  background-color: #7507e2;
+  background-color: #16db3d;
 }
 .favourite-access-navigation .favourite.fav-3 {
-  background-color: #e207a4;
+  background-color: #e207bb;
 }
-.swipe {
-  overflow: hidden;
-  visibility: hidden;
-  position: relative;
-}
-.swipe-wrap {
-  overflow: hidden;
-  position: relative;
-}
-.swipe-wrap > li {
-  float: left;
+.swiper-container,
+.swiper-slide {
   width: 100%;
-  position: relative;
 }
 .clock-presenter,
 .weather-presenter {
