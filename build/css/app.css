@@ -341,7 +341,7 @@ a img {
 .favourite-access-navigation .favourite.fav-3 {
   background-color: #e207bb;
 }
-@media only screen and (max-device-width: 400px) and (min-resolution: 1.5dppx), only screen and (max-device-width: 400px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-device-width: 400px) and (min--moz-device-pixel-ratio: 1.5), only screen and (max-device-width: 400px) and (min-resolution: 144dpi) {
+@media only screen and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-device-width: 667px) and (min-resolution: 144dpi) {
   .favourite-access-navigation .favourite {
     height: 600px;
   }
