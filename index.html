@@ -63,33 +63,16 @@
   </section>
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/swiper/dist/idangerous.swiper.js"></script>
-  <script src="vendor/jrespond.js"></script>
+  <script src="bower_components/mediaCheck/js/mediaCheck.js"></script>
 
   <script charset="utf-8">
-    var jRes = jRespond([
-      {
-        label: 'mobile-landscape',
-        enter: 0,
-        exit: 480
-      },
-      {
-        label: 'small-tablet-vertical',
-        enter: 600,
-        exit: 612
-      },
-      {
-        label: 'portrait-tablet-width',
-        enter: 600,
-        exit: 1199
-      }
-    ]);
-
     var adjustNavItemHeight = function(){
       $('.direct-access-navigation li').each(function(_, elem){
         $elem = $(elem);
         $elem.css('height', $elem.css('width'));
       });
     };
+
 
     window.onload = function() {
       var favSwiper = new Swiper('.favourite-access-navigation.swiper-container',{
@@ -100,46 +83,22 @@
         //etc..
       });
 
-      var accessNavSwiper = new Swiper('.direct-access-navigation.swiper-container',{
-        slidesPerView: 'auto',
-        calculateHeight: true,
-        resistance: '100%'
-      });
+      adjustNavItemHeight();
 
-      jRes.addFunc([
-        {
-          breakpoint: ['small-tablet-vertical', 'portrait-tablet-width'],
-          enter: function() {
-            accessNavSwiper = new Swiper('.direct-access-navigation.swiper-container',{
-              slidesPerView: 'auto',
-              calculateHeight: true
-            });
-            adjustNavItemHeight();
-          },
-          exit: function() {
-            if(accessNavSwiper) {
-              accessNavSwiper.destroy();
-              accessNavSwiper = null;
-            }
-          }
+      var accessNavSwiper;
+      mediaCheck({
+        media: '(min-device-width: 400px)',
+        entry: function() {
+          accessNavSwiper = new Swiper('.direct-access-navigation.swiper-container',{
+            slidesPerView: 'auto',
+            calculateHeight: true,
+            resistance: '100%'
+          });
         },
-        {
-          breakpoint: 'mobile-landscape',
-          enter: function() {
-            $('body').css('background-color', "red");
-            adjustNavItemHeight();
-
-            if(accessNavSwiper) {
-              accessNavSwiper.destroy();
-              accessNavSwiper = null;
-            }
-          },
-          exit: function() {
-
-          }
+        exit: function() {
+          if(accessNavSwiper) accessNavSwiper.destroy();
         }
-      ]);
-
+      });
     }
 
   </script>

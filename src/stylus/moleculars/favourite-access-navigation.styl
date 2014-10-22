@@ -22,12 +22,9 @@
     &.fav-3
       background-color #e207bb
 
-@media only screen and (min-resolution: 1.5dppx) and (max-device-width: mobile-landscape),
-  only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-device-width: mobile-landscape),
-  only screen and (min--moz-device-pixel-ratio: 1.5) and (max-device-width: mobile-landscape),
-  only screen and (min-resolution: 144dpi) and (max-device-width: mobile-landscape)
-    .favourite-access-navigation .favourite
-      height 600px
++mobile(density: 1.5)
+  .favourite-access-navigation .favourite
+    height 600px
 
 .swiper-container, .swiper-slide
   width 100%

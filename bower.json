@@ -13,6 +13,7 @@
   "dependencies": {
     "touchy": "*",
     "swiper": "~2.7.0",
-    "jquery": "~2.1.1"
+    "jquery": "~2.1.1",
+    "mediaCheck": "~0.4.5"
   }
 }
