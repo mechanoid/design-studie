@@ -286,6 +286,32 @@ a img {
     clear: both;
   }
 }
+@media only screen and (max-device-width: 667px) and (orientation: landscape) {
+  .direct-access-navigation li {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 14.166666666666702%;
+    margin-left: 0%;
+    margin-right: 3%;
+  }
+  .direct-access-navigation li:before,
+  .direct-access-navigation li:after {
+    content: '';
+    display: table;
+  }
+  .direct-access-navigation li:after {
+    clear: both;
+  }
+  .direct-access-navigation li:nth-child(6n) {
+    margin-right: 0%;
+    float: right;
+  }
+  .direct-access-navigation li:nth-child(6n+1) {
+    clear: both;
+  }
+}
 @media only screen and (min-device-width: 479px) {
   .direct-access-navigation {
     overflow: hidden;
