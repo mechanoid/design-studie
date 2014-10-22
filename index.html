@@ -100,6 +100,14 @@
           if(accessNavSwiper) accessNavSwiper.destroy();
         }
       });
+
+
+      var mql = window.matchMedia("(orientation: portrait)");
+
+      // Add a media query change listener
+      mql.addListener(function(m) {
+      	adjustNavItemHeight();
+      });
     }
 
   </script>
