@@ -89,7 +89,6 @@
       mediaCheck({
         media: '(min-device-width: 668px)',
         entry: function() {
-          $('body').css('background', 'red');
           accessNavSwiper = new Swiper('.direct-access-navigation.swiper-container',{
             slidesPerView: 'auto',
             calculateHeight: true,
@@ -100,17 +99,6 @@
           if(accessNavSwiper) accessNavSwiper.destroy();
         }
       });
-
-      mediaCheck({
-        media: '(max-device-width: 667px)',
-        entry: function() {
-          $('body').css('background', 'blue');
-        },
-        exit: function() {
-        }
-      });
-
-
     }
 
   </script>
