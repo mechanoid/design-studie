@@ -292,7 +292,7 @@ a img {
     float: left;
     clear: none;
     text-align: inherit;
-    width: 17.5%;
+    width: 14.166666666666702%;
     margin-left: 0%;
     margin-right: 3%;
   }
@@ -304,11 +304,18 @@ a img {
   .direct-access-navigation li:after {
     clear: both;
   }
-  .direct-access-navigation li:nth-child(5n) {
+  .direct-access-navigation li:nth-child(4n) {
+    margin-right: 3%;
+    float: left;
+  }
+  .direct-access-navigation li:nth-child(4n+1) {
+    clear: none;
+  }
+  .direct-access-navigation li:nth-child(6n) {
     margin-right: 0%;
     float: right;
   }
-  .direct-access-navigation li:nth-child(5n+1) {
+  .direct-access-navigation li:nth-child(6n+1) {
     clear: both;
   }
 }
