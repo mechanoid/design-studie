@@ -292,7 +292,7 @@ a img {
     float: left;
     clear: none;
     text-align: inherit;
-    width: 11.714285714285728%;
+    width: 17.6%;
     margin-left: 0%;
     margin-right: 3%;
   }
@@ -304,11 +304,11 @@ a img {
   .direct-access-navigation li:after {
     clear: both;
   }
-  .direct-access-navigation li:nth-child(6n) {
+  .direct-access-navigation li:nth-child(5n) {
     margin-right: 0%;
     float: right;
   }
-  .direct-access-navigation li:nth-child(6n+1) {
+  .direct-access-navigation li:nth-child(5n+1) {
     clear: both;
   }
 }
