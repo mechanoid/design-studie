@@ -99,6 +99,11 @@ a img {
   height: 2em;
   background-color: #000;
 }
+@media only screen and (max-device-width: 667px) {
+  .dashboard-header {
+    display: none;
+  }
+}
 .dashboard-content {
   margin: 2em 0;
   overflow: hidden;
