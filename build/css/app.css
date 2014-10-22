@@ -312,7 +312,7 @@ a img {
     clear: both;
   }
 }
-@media only screen and (min-device-width: 667px) {
+@media only screen and (min-device-width: 668px) {
   .direct-access-navigation {
     overflow: hidden;
     padding: 10px;
